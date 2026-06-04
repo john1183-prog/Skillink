@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface: #f9f9ff;
+    --color-background: #f9f9ff;
+    --color-on-surface: #151c27;
+    --color-on-background: #151c27;
+    --color-primary: #0038d1;
+    --color-surface-container: #e7eefe;
+    --color-surface-container-low: #f0f3ff;
+    --color-outline-variant: #c4c5d9;
+  }
+
+  .dark {
+    --color-surface: #11131b;
+    --color-surface-dim: #0c0e16;
+    --color-surface-bright: #1d1f28;
+    --color-surface-container-lowest: #0c0e16;
+    --color-surface-container-low: #191b24;
+    --color-surface-container: #1d1f28;
+    --color-surface-container-high: #282a32;
+    --color-surface-container-highest: #33343e;
+    --color-on-surface: #e2e1ee;
+    --color-on-surface-variant: #c4c5d9;
+    --color-background: #11131b;
+    --color-on-background: #e2e1ee;
+    --color-outline-variant: #45464f;
+    --color-outline: #8e8f9f;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-panel {
+    background: rgba(17, 19, 27, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(196, 197, 217, 0.12);
+  }
+
+  .ambient-glow-primary {
+    background: radial-gradient(circle, rgba(0, 56, 209, 0.25) 0%, transparent 70%);
+  }
+
+  .text-balance { text-wrap: balance; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
