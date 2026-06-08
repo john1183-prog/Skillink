@@ -2,13 +2,11 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useRouter } from 'next/navigation'
-import { ExternalLink, Briefcase } from 'lucide-react'
+import { ExternalLink, Briefcase, Calendar } from 'lucide-react'
 import { mockOpportunities } from '@/lib/demo/mockData'
 import { FadeSlideIn } from '@/components/animations/FadeSlideIn'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-
-import { Briefcase, ExternalLink, Calendar } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 const FILTERS = ['All', 'Internship', 'Scholarship', 'Bootcamp', 'Hackathon']
