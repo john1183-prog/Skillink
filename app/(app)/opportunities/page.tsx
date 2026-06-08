@@ -7,7 +7,7 @@ import { mockOpportunities } from '@/lib/demo/mockData'
 import { FadeSlideIn } from '@/components/animations/FadeSlideIn'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { Button } from '@/components/ui/Button'
+
 import { Briefcase, ExternalLink, Calendar } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
