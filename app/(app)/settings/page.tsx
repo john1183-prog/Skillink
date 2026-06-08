@@ -7,7 +7,20 @@ import { useAuthStore } from '@/lib/store/authStore'
 import { FadeSlideIn } from '@/components/animations/FadeSlideIn'
 import { User, Shield, Bell, ChevronRight, LogOut, Info, ExternalLink } from 'lucide-react'
 
-const SECTIONS = [
+type SettingItem = {
+  label: string
+  desc: string
+  icon: React.ComponentType<any>
+  href: string | null
+  external?: boolean
+}
+
+type SettingSection = {
+  title: string
+  items: SettingItem[]
+}
+
+const SECTIONS: SettingSection[] = [
   {
     title: 'Account',
     items: [
