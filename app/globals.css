@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface:                   #f9f9ff;
+    --color-surface-dim:               #d3daea;
+    --color-surface-bright:            #f9f9ff;
+    --color-surface-container-lowest:  #ffffff;
+    --color-surface-container-low:     #f0f3ff;
+    --color-surface-container:         #e7eefe;
+    --color-surface-container-high:    #e2e8f8;
+    --color-surface-container-highest: #dce2f3;
+    --color-on-surface:                #151c27;
+    --color-on-surface-variant:        #434656;
+    --color-inverse-surface:           #2a313d;
+    --color-inverse-on-surface:        #ebf1ff;
+    --color-surface-tint:              #0646f8;
+    --color-primary:                   #0038d1;
+    --color-on-primary:                #ffffff;
+    --color-primary-container:         #1b4fff;
+    --color-on-primary-container:      #dfe2ff;
+    --color-inverse-primary:           #b9c3ff;
+    --color-secondary:                 #575e72;
+    --color-on-secondary:              #ffffff;
+    --color-secondary-container:       #dbe2fa;
+    --color-on-secondary-container:    #5d6478;
+    --color-tertiary:                  #3636c5;
+    --color-on-tertiary:               #ffffff;
+    --color-tertiary-container:        #5052dd;
+    --color-on-tertiary-container:     #e2e0ff;
+    --color-error:                     #ba1a1a;
+    --color-on-error:                  #ffffff;
+    --color-error-container:           #ffdad6;
+    --color-on-error-container:        #93000a;
+    --color-outline:                   #747688;
+    --color-outline-variant:           #c4c5d9;
+    --color-background:                #f9f9ff;
+    --color-on-background:             #151c27;
+  }
+
+  .dark {
+    --color-surface:                   #11131b;
+    --color-surface-dim:               #0c0e16;
+    --color-surface-bright:            #1d1f28;
+    --color-surface-container-lowest:  #0c0e16;
+    --color-surface-container-low:     #191b24;
+    --color-surface-container:         #1d1f28;
+    --color-surface-container-high:    #282a32;
+    --color-surface-container-highest: #33343e;
+    --color-on-surface:                #e2e1ee;
+    --color-on-surface-variant:        #c4c5d9;
+    --color-inverse-surface:           #e2e1ee;
+    --color-inverse-on-surface:        #2a313d;
+    --color-surface-tint:              #b9c3ff;
+    --color-primary:                   #b9c3ff;
+    --color-on-primary:                #001257;
+    --color-primary-container:         #0033c1;
+    --color-on-primary-container:      #dde1ff;
+    --color-inverse-primary:           #0038d1;
+    --color-secondary:                 #bfc6dd;
+    --color-on-secondary:              #293042;
+    --color-secondary-container:       #3f4759;
+    --color-on-secondary-container:    #dbe2fa;
+    --color-tertiary:                  #c0c1ff;
+    --color-on-tertiary:               #07006c;
+    --color-tertiary-container:        #2f2ebe;
+    --color-on-tertiary-container:     #e1e0ff;
+    --color-error:                     #ffb4ab;
+    --color-on-error:                  #690005;
+    --color-error-container:           #93000a;
+    --color-on-error-container:        #ffdad6;
+    --color-outline:                   #8e8f9f;
+    --color-outline-variant:           #45464f;
+    --color-background:                #11131b;
+    --color-on-background:             #e2e1ee;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-panel {
+    background: rgba(17, 19, 27, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .ambient-glow-primary {
+    background: radial-gradient(ellipse at center, rgba(0, 56, 209, 0.15) 0%, transparent 70%);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 24px rgba(0, 56, 209, 0.35);
+  }
+
+  .shadow-glow-sm {
+    box-shadow: 0 0 12px rgba(0, 56, 209, 0.25);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
