@@ -117,7 +117,7 @@ export default function ProfilePage() {
                 {selectedPath?.title ?? 'Data Analyst'}
               </p>
               <p className="text-body-sm text-on-surface-variant">
-                {selectedPath?.company ?? 'Various Nigerian tech companies'}
+                {(selectedPath as any)?.company ?? 'Various Nigerian tech companies'}
               </p>
             </div>
           </div>
